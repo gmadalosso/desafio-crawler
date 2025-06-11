@@ -13,8 +13,13 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
+    volumes:
+      - dados_mongo_desafio:/data/db
     networks:
       - net
+
+volumes:
+  dados_mongo_desafio:
 
 networks:
   net:
