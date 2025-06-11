@@ -25,3 +25,7 @@ build/
 # Arquivos de ambiente
 .env
 .env.*
+
+# Resultados
+resultadosCSV/
+resultadosJSON/
