@@ -1,9 +1,21 @@
 import os
 from pymongo import MongoClient
 
+def detecta_ambiente():
+    if os.path.exists("/.dockerenv"):
+        return "docker"
+    return "local"
+
 def salvar_mongodb(dados):
+    ambiente = detecta_ambiente()
+    print(f"Acessando o bando de dados do ambiente: {ambiente}")
+
     try:
-        mongo_url = os.environ.get("MONGO_URL", "mongodb://mongo:27017")
+        if ambiente == "docker":
+            mongo_url = os.getenv("MONGO_URL_DOCKER")
+        else:
+            mongo_url = os.getenv("MONGO_URL_LOCAL")
+
         cliente = MongoClient(mongo_url)
         db = cliente["mongo_desafio"]
         colecao = db["quotes"]
