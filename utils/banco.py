@@ -1,21 +1,31 @@
 import os
 from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
 
 def detecta_ambiente():
     if os.path.exists("/.dockerenv"):
         return "docker"
     return "local"
 
+def testar_conexao(mongo_url):
+    try:
+        cliente = MongoClient(mongo_url, serverSelectionTimeoutMS=3000)
+        cliente.admin.command("ping")
+        return True
+    except ConnectionFailure:
+        return False
+
 def salvar_mongodb(dados):
     ambiente = detecta_ambiente()
-    print(f"Acessando o bando de dados do ambiente: {ambiente}")
+    print(f"Acessando o banco de dados do ambiente: {ambiente}")
+
+    mongo_url = os.getenv("MONGO_URL_DOCKER") if ambiente == "docker" else os.getenv("MONGO_URL_LOCAL")
+
+    if not testar_conexao(mongo_url):
+        print(f"Não foi possível conectar ao MongoDB em: {mongo_url}")
+        return
 
     try:
-        if ambiente == "docker":
-            mongo_url = os.getenv("MONGO_URL_DOCKER")
-        else:
-            mongo_url = os.getenv("MONGO_URL_LOCAL")
-
         cliente = MongoClient(mongo_url)
         db = cliente["mongo_desafio"]
         colecao = db["quotes"]
