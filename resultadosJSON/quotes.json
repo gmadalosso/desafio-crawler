@@ -748,5 +748,84 @@
             "religion",
             "sun"
         ]
+    },
+    {
+        "texto": "“The truth.\" Dumbledore sighed. \"It is a beautiful and terrible thing, and should therefore be treated with great caution.”",
+        "author": "J.K. Rowling",
+        "tags": [
+            "truth"
+        ]
+    },
+    {
+        "texto": "“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”",
+        "author": "Jimi Hendrix",
+        "tags": [
+            "death",
+            "life"
+        ]
+    },
+    {
+        "texto": "“To die will be an awfully big adventure.”",
+        "author": "J.M. Barrie",
+        "tags": [
+            "adventure",
+            "love"
+        ]
+    },
+    {
+        "texto": "“It takes courage to grow up and become who you really are.”",
+        "author": "E.E. Cummings",
+        "tags": [
+            "courage"
+        ]
+    },
+    {
+        "texto": "“But better to get hurt by the truth than comforted with a lie.”",
+        "author": "Khaled Hosseini",
+        "tags": [
+            "life"
+        ]
+    },
+    {
+        "texto": "“You never really understand a person until you consider things from his point of view... Until you climb inside of his skin and walk around in it.”",
+        "author": "Harper Lee",
+        "tags": [
+            "better-life-empathy"
+        ]
+    },
+    {
+        "texto": "“You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.”",
+        "author": "Madeleine L'Engle",
+        "tags": [
+            "books",
+            "children",
+            "difficult",
+            "grown-ups",
+            "write",
+            "writers",
+            "writing"
+        ]
+    },
+    {
+        "texto": "“Never tell the truth to people who are not worthy of it.”",
+        "author": "Mark Twain",
+        "tags": [
+            "truth"
+        ]
+    },
+    {
+        "texto": "“A person's a person, no matter how small.”",
+        "author": "Dr. Seuss",
+        "tags": [
+            "inspirational"
+        ]
+    },
+    {
+        "texto": "“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.”",
+        "author": "George R.R. Martin",
+        "tags": [
+            "books",
+            "mind"
+        ]
     }
 ]
