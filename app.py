@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
-from utils.arquivos import salvar_json, salvar_csv
+from utils.arquivos import print_dataframe, salvar_json, salvar_csv
 from utils.banco import salvar_mongodb
 from dotenv import load_dotenv
 
@@ -54,8 +54,8 @@ def main():
     salvar_json(resultados, LOCAL_JSON)
     salvar_csv(resultados, LOCAL_CSV)
     salvar_mongodb(resultados)
-
     print(f"Raspagem finalizada! {len(resultados)} citações salvas em '{LOCAL_JSON}' e '{LOCAL_CSV}'.")
+    print_dataframe(LOCAL_JSON, quantidade=5)  
 
     driver.quit()
 
