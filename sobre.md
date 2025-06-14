@@ -75,3 +75,6 @@ Ao final da execução, você verá:
   - `resultadosJSON/quotes.json`
   - `resultadosCSV/quotes.csv`
 - Dados armazenados na coleção `quotes` do banco `mongo_desafio` no MongoDB.
+
+## Prova de conclusão do desafio
+Os screenshots de prova da conclusão do desafio se encontram na pasta `screenshots` do repositório.
